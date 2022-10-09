@@ -17,14 +17,26 @@ public class Main {
 
         System.out.println("Введите количество строк: ");
         int number = in.nextInt();
-        String[] myArray = new String[number];
-        in.nextInt();
-        for (int i=0;i<myArray.length;i++){
+        String[] differentCounts = new String[number];
+        in.nextLine();
+        for (int i=0;i<differentCounts.length;i++){
             System.out.println("Введите строку номер "+i);
-            myArray[i] = in.nextLine();
-            System.out.println("строка = "+myArray[i]);
+            differentCounts[i] = in.nextLine();
+            //System.out.println("строка = "+differentCounts[i]);
         }
 
-        System.out.println("");
+        char s;
+        for (int i=0; i<number; i++){
+            System.out.println(i+" строка содержит символов всего = "+differentCounts[i].length());
+            for (int j=0;j<differentCounts[i].length();j++){
+                s = differentCounts[i].charAt(j);
+                System.out.println("s = "+s);
+            }
+
+        }
+
+
+
+
     }
 }
